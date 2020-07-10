@@ -1116,12 +1116,12 @@ if (text == "قفل التاك") then
   database:set("lock_sarha:KENAE"..msg.chat_id_..bot_id,"ok")
   end
   end
-  if (text == "تفعيل اللعبه") then
+  if (text == "تفعيل الالعاب") then
   local tsX_o = database:get("gamee:KENAE"..msg.chat_id_..bot_id)
   if tsX_o then
-  tsX000("lock",msg,"☑┇تم تفعيل اللعبه")
+  tsX000("lock",msg,"☑┇تم تفعيل الالعاب")
   else
-  tsX000("lock",msg,"☑┇تم تفعيل اللعبه")
+  tsX000("lock",msg,"☑┇تم تفعيل الالعاب")
   database:set("gamee:KENAE"..msg.chat_id_..bot_id,"ok")
   end
   end
@@ -1573,12 +1573,12 @@ database:del("lock_note:KENAE"..msg.chat_id_..bot_id,"ok")
   database:del("lock_username:KENAE"..msg.chat_id_..bot_id,"ok")
   end
   end
-  if (text == "تعطيل اللعبه") then
+  if (text == "تم تعطيل الالعاب") then
   local tsX_o = database:get("gamee:KENAE"..msg.chat_id_..bot_id)
   if not tsX_o then
-  tsX000("lock",msg,"☑┇تم تعطيل اللعبه")
+  tsX000("lock",msg,"☑┇تم تم تعطيل الالعاب")
   else
-  tsX000("lock",msg,"☑┇تم تعطيل اللعبه")
+  tsX000("lock",msg,"☑┇تم تم تعطيل الالعاب")
   database:del("gamee:KENAE"..msg.chat_id_..bot_id,"ok")
   end
   end
@@ -5746,17 +5746,17 @@ taha = tonumber((database:get('KENAE:'..bot_id..'gamepoint' .. msg.chat_id_) or 
 send(msg.chat_id_, msg.id_, 1,'💎¦ تم بيع جواهرك كل مجوهره تساوي '..taha..' رساله', 'md')
 end
 end
-if text == 'تفعيل اللعبه' and is_owner(msg) then   
-taha = '*📛¦*تم تفعيل اللعبه  ✔' 
+if text == 'تفعيل الالعاب' and is_owner(msg) then   
+taha = '*📛¦*تم تفعيل الالعاب  ✔' 
 send(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 database:set('KENAE:'..bot_id..'lock_geam'..msg.chat_id_,true)  
 end
-if text == 'تعطيل اللعبه' and is_owner(msg) then  
-taha = '*📛¦*تم تعطيل اللعبه  ❌' 
+if text == 'تم تعطيل الالعاب' and is_owner(msg) then  
+taha = '*📛¦*تم تم تعطيل الالعاب  ❌' 
 send(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 database:del('KENAE:'..bot_id..'lock_geam'..msg.chat_id_) 
 end
-if text == 'تفعيل اللعبه' and is_owner(msg) then  
+if text == 'تفعيل الالعاب' and is_owner(msg) then  
 kali1 = '*🏵┇*لبدء اللعب ارسل امر (الاسرع) او (سمايلات) او (حزوره)'
 send(msg.chat_id_, 0, 1, kali1,1, 'md')
 end
